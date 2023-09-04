@@ -6,14 +6,6 @@
         {
         }
 
-        public void ImprimeInfo()
-        {
-            Console.WriteLine($"Nome Fantasia: {NomeFantasia}");
-            Console.WriteLine($"Razão Social: {RazaoSocial}");
-            Console.WriteLine($"CNPJ: {CNPJ}");
-            Console.WriteLine($"Setor: {Setor}");
-        }
-
         public void RealizarVenda()
         {
             Console.WriteLine("Venda de Serviços realizada!");
