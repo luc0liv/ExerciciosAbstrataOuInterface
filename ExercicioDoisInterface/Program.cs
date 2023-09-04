@@ -1,12 +1,22 @@
-﻿namespace ExercicioDoisInterface
+﻿using System.Runtime.Intrinsics.X86;
+
+namespace ExercicioDoisInterface
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            List<IEmpresa> listaEmpresas = new List<IEmpresa>();
+        //Vamos pegar o projeto de vcs da Empresa com interfaces!
+        //Crie uma interface EnviarNotificacao com um método void EnviarMensagemCliente.
+        //Crie uma classe EnviarNotificacaoWhatsApp, que implementa EnviarNotificacao e
+        //nela teremos o método EnviarMensagemCliente que printa a notificação: "Estou enviando uma mensagem no WhatsApp do Cliente!";
 
-            IEmpresa varejo = new Varejo("Varejão", "Varejão LTDA", "1234567", "Varejo");
+        //Dentro da classe Varejo, vamos incluir um private readonly EnviarNotificacaoWhatsApp que é recebido no construtor da classe.
+        //Após Realizar a venda, utilizaremos o método de EnviarNotificacao.
+
+                    List<IEmpresa> listaEmpresas = new List<IEmpresa>();
+
+            IEmpresa varejo = new Varejo("Varejão", "Varejão LTDA", "1234567", "Varejo", new EnviarNotificacaoWhatsapp());
 
             IEmpresa empreiteira = new Empreiteira("Empreiteirona", "Empreiteira da panterona LTDA", "2345321", "Construção Civil");
 
